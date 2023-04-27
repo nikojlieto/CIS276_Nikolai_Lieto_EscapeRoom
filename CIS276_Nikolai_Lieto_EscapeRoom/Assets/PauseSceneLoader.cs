@@ -4,9 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class CenterSceneLoader : MonoBehaviour
+public class PauseSceneLoader : MonoBehaviour
 {
-public const string GAME_SCENE = "CenterScene";
+    public const string PAUSE_SCENE = "PauseScene";
+    public Scene currentScene;
     [SerializeField]
     private Button loadSceneButton;
     private void Start()
@@ -16,8 +17,7 @@ public const string GAME_SCENE = "CenterScene";
 
     public void LoadScene()
     {
-        Debug.Log("loaded!");
-        SceneManager.LoadScene(GAME_SCENE);
-        SceneManager.LoadScene("DisplayScene", LoadSceneMode.Additive);
+        currentScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(PAUSE_SCENE);
     }
 }

@@ -4,9 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class CenterSceneLoader : MonoBehaviour
+public class ShelfSceneLoader : MonoBehaviour
 {
-public const string GAME_SCENE = "CenterScene";
     [SerializeField]
     private Button loadSceneButton;
     private void Start()
@@ -16,8 +15,6 @@ public const string GAME_SCENE = "CenterScene";
 
     public void LoadScene()
     {
-        Debug.Log("loaded!");
-        SceneManager.LoadScene(GAME_SCENE);
-        SceneManager.LoadScene("DisplayScene", LoadSceneMode.Additive);
+        SceneManager.LoadScene("RightScene");
     }
 }
