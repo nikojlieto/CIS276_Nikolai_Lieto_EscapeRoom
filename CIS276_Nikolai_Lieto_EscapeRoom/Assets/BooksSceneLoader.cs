@@ -16,8 +16,7 @@ public const string LEFT_SCENE = "LeftScene";
 
     public void LoadScene()
     {
-        SceneManager.LoadScene(LEFT_SCENE, LoadSceneMode.Additive);
-        SceneManager.UnloadSceneAsync("BooksLeftScene");
+        SceneManager.LoadScene(LEFT_SCENE);
     }
 }
 

@@ -20,12 +20,12 @@ public const string GAME_SCENE = "CenterScene";
 
     public void LoadScene()
     {
-        SceneManager.LoadScene(GAME_SCENE, LoadSceneMode.Additive);
-        SceneManager.UnloadSceneAsync("LeftScene");
+        SceneManager.LoadScene(GAME_SCENE);
+
     }
     public void LoadBooks()
     {
-        SceneManager.LoadScene("BooksLeftScene", LoadSceneMode.Additive);
-        SceneManager.UnloadSceneAsync("LeftScene");
+        SceneManager.LoadScene("BooksLeftScene");
+
     }
 }
