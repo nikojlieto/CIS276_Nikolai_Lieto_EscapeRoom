@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class InventoryController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+[SerializeField]
+private InventoryUIModel inventoryUIModel;
+[SerializeField]
+private InventoryUIView inventoryUIView;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+private void Start()
+{
+    inventoryUIView.UpdateView(InventoryUIModel.inventory);
+    inventoryUIView.onUse += UseItem;
+}
+
+private void UseItem(ItemData itemData)
+{
+    inventoryUIModel.inventory.Remove(itemData);
+    inventoryUIView.UpdateView(InventoryUIModel.inventory);
+}
+
 }
