@@ -15,6 +15,7 @@ public class ShelfSceneLoader : MonoBehaviour
 
     public void LoadScene()
     {
-        SceneManager.LoadScene("RightScene");
+        SceneManager.LoadScene("RightScene", LoadSceneMode.Additive);
+        SceneManager.UnloadSceneAsync("RightShelfScene");
     }
 }

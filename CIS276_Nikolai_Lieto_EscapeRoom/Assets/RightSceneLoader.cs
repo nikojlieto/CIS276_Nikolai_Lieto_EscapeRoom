@@ -19,12 +19,13 @@ public class RightSceneLoader : MonoBehaviour
 
     public void LoadScene()
     {
-        SceneManager.LoadScene(GAME_SCENE);
-        SceneManager.LoadScene("DisplayScene", LoadSceneMode.Additive);
+        SceneManager.LoadScene(GAME_SCENE, LoadSceneMode.Additive);
+        SceneManager.UnloadSceneAsync("RightScene");
     }
 
     public void LoadShelf()
     {
-        SceneManager.LoadScene("RightShelfScene");
+        SceneManager.LoadScene("RightShelfScene", LoadSceneMode.Additive);
+        SceneManager.UnloadSceneAsync("RightScene");
     }
 }

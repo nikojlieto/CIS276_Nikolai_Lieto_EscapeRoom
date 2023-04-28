@@ -17,7 +17,6 @@ public class PauseSceneLoader : MonoBehaviour
 
     public void LoadScene()
     {
-        currentScene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(PAUSE_SCENE);
+        SceneManager.LoadScene(PAUSE_SCENE, LoadSceneMode.Additive);
     }
 }

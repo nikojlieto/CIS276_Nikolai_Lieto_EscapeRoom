@@ -20,14 +20,14 @@ public const string RIGHT_SCENE = "RightScene";
 
     public void LoadLeftScene()
     {
-        SceneManager.LoadScene(LEFT_SCENE);
-        SceneManager.LoadScene("DisplayScene", LoadSceneMode.Additive);
+        SceneManager.LoadScene(LEFT_SCENE, LoadSceneMode.Additive);
+        SceneManager.UnloadSceneAsync("CenterScene");
     }
 
     public void LoadRightScene()
     {
-        SceneManager.LoadScene(RIGHT_SCENE);
-        SceneManager.LoadScene("DisplayScene", LoadSceneMode.Additive);
+        SceneManager.LoadScene(RIGHT_SCENE, LoadSceneMode.Additive);
+        SceneManager.UnloadSceneAsync("CenterScene");
     }
 }
 

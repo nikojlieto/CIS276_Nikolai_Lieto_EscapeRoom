@@ -16,6 +16,6 @@ public class LastSceneLoader : MonoBehaviour
 
     public void LoadScene()
     {
-        //SceneManager.LoadScene(PAUSE_SCENE);
+        SceneManager.UnloadSceneAsync("PauseScene");
     }
 }

@@ -347,7 +347,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadSceneButton: {fileID: 480292992}
-  loadShelfButton: {fileID: 0}
+  loadShelfButton: {fileID: 1341446748}
 --- !u!4 &344598239
 Transform:
   m_ObjectHideFlags: 0
