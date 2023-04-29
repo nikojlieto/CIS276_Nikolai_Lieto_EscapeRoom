@@ -11,14 +11,14 @@ private InventoryUIView inventoryUIView;
 
 private void Start()
 {
-    inventoryUIView.UpdateView(InventoryUIModel.inventory);
+    inventoryUIView.UpdateView(inventoryUIModel.inventory);
     inventoryUIView.onUse += UseItem;
 }
 
 private void UseItem(ItemData itemData)
 {
     inventoryUIModel.inventory.Remove(itemData);
-    inventoryUIView.UpdateView(InventoryUIModel.inventory);
+    inventoryUIView.UpdateView(inventoryUIModel.inventory);
 }
 
 }

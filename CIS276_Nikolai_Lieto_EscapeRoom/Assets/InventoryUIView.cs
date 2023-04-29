@@ -2,6 +2,7 @@ using System.Collections;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryUIView : MonoBehaviour
 {
@@ -27,7 +28,7 @@ public class InventoryUIView : MonoBehaviour
     public void InventoryItemClicked(InventoryViewButton button)
     {
         selectedButton = button;
-        button.onClick.AddListener(UseItem);
+        button.GetComponent<Button>().onClick.AddListener(UseItem);
     }
 
     private void UseItem()

@@ -168,6 +168,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &533239660
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 533239662}
+  - component: {fileID: 533239661}
+  m_Layer: 0
+  m_Name: InventoryController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &533239661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533239660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 816152d82bb27254d931563b48007ebf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryUIModel: {fileID: 1775069149}
+  inventoryUIView: {fileID: 879125754}
+--- !u!4 &533239662
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533239660}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &639961206
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,8 +297,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 40.714, y: -162.67}
+  m_SizeDelta: {x: 446.95, y: -29.325}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &724160412
 MonoBehaviour:
@@ -271,10 +317,10 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 0
+  m_ChildAlignment: 3
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 100, y: 100}
+  m_CellSize: {x: 80, y: 80}
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
@@ -367,6 +413,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4648691216fe1441b9de2cf8460515e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemButtonPrefab: {fileID: 1023595610445196542, guid: e2bcc4e24429a0d46adcfc082d30e21d, type: 3}
+  inventoryGrid: {fileID: 724160411}
 --- !u!1 &915877454
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,8 +450,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -161.9497}
+  m_SizeDelta: {x: 528.3723, y: -30.7614}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &915877456
 MonoBehaviour:
@@ -478,7 +526,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -264, y: -144}
+  m_AnchoredPosition: {x: -206, y: -120}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &929571006
@@ -528,8 +576,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -861,7 +909,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1775069149
 MonoBehaviour:
@@ -877,6 +925,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory:
   - {fileID: 11400000, guid: fbb0c0135a33612408aea954f2aa8953, type: 2}
+  - {fileID: 11400000, guid: e45a99a5560d056409b233c7aaf7ca0f, type: 2}
+  - {fileID: 11400000, guid: 7f6c31bf333e9634b9768bbac2f50369, type: 2}
+  - {fileID: 11400000, guid: 34a14d2b97975ac4e99c7af9c2553d2c, type: 2}
+  - {fileID: 11400000, guid: dca03c16079afb146b773100d3161246, type: 2}
+  - {fileID: 11400000, guid: 2c31295e617e81c4f99739eac8ea11ad, type: 2}
 --- !u!1 &1804337038
 GameObject:
   m_ObjectHideFlags: 0
