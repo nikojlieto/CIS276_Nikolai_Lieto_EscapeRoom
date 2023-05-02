@@ -360,6 +360,7 @@ GameObject:
   - component: {fileID: 639961210}
   - component: {fileID: 639961209}
   - component: {fileID: 639961208}
+  - component: {fileID: 639961211}
   m_Layer: 5
   m_Name: DoorDesc
   m_TagString: Untagged
@@ -456,7 +457,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6226415, g: 0.050907757, b: 0.050907757, a: 1}
+  m_Color: {r: 0.6313726, g: 0.54901963, b: 0.52156866, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -481,6 +482,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 639961206}
   m_CullTransparentMesh: 1
+--- !u!114 &639961211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639961206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a7162ebc6fc00349aabde761aaf0106, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 639961208}
+  text: It's a door.
+  correctItem: {fileID: 0}
 --- !u!1 &742686481
 GameObject:
   m_ObjectHideFlags: 0

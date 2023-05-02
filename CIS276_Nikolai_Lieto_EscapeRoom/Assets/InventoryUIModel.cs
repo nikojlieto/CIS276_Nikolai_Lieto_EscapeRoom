@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class InventoryUIModel : MonoBehaviour
 {
-    public List<ItemData> inventory;
+    public List<ItemData> inventory = new List<ItemData>();
 }

@@ -21,4 +21,11 @@ private void UseItem(ItemData itemData)
     inventoryUIView.UpdateView(inventoryUIModel.inventory);
 }
 
+public void GetItem(ItemData itemData)
+{
+    inventoryUIModel.inventory.Add(itemData);
+    inventoryUIView.UpdateView(inventoryUIModel.inventory);
 }
+}
+
+

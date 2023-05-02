@@ -11,11 +11,17 @@ public const string GAME_SCENE = "CenterScene";
     private Button loadSceneButton;
     [SerializeField]
     private Button loadBooksButton;
+    [SerializeField]
+    private Button loadBearPuzzleButton;
+    public InventoryUIView inventoryUIView;
+    [SerializeField]
+    private ItemData bearItemData;
     private void Start()
     {
         loadSceneButton.onClick.AddListener(LoadScene);
         loadBooksButton.onClick.AddListener(LoadBooks);
-        
+        loadBearPuzzleButton.onClick.AddListener(LoadBearPuzzle);
+        inventoryUIView = InventoryUIView.FindObjectOfType<InventoryUIView>();
     }
 
     public void LoadScene()
@@ -27,5 +33,10 @@ public const string GAME_SCENE = "CenterScene";
     {
         SceneManager.LoadScene("BooksLeftScene");
 
+    }
+    public void LoadBearPuzzle(){
+        if (inventoryUIView.selectedButton.itemData == bearItemData){
+            SceneManager.LoadScene("BearPuzzleScene");
+        }
     }
 }

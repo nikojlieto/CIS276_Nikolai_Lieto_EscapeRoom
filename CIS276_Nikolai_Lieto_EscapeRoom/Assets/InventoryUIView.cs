@@ -12,7 +12,7 @@ public class InventoryUIView : MonoBehaviour
     private GameObject itemButtonPrefab;
     [SerializeField]
     private Transform inventoryGrid;
-    private InventoryViewButton selectedButton;
+    public InventoryViewButton selectedButton;
 
     public void UpdateView(List<ItemData> items)
     {
