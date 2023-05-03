@@ -16,17 +16,21 @@ public const string GAME_SCENE = "CenterScene";
     public InventoryUIView inventoryUIView;
     [SerializeField]
     private ItemData bearItemData;
+    public InventoryController inventoryController;
+    public GameTracker gameTracker;
     private void Start()
     {
         loadSceneButton.onClick.AddListener(LoadScene);
         loadBooksButton.onClick.AddListener(LoadBooks);
         loadBearPuzzleButton.onClick.AddListener(LoadBearPuzzle);
         inventoryUIView = InventoryUIView.FindObjectOfType<InventoryUIView>();
+        inventoryController = InventoryController.FindObjectOfType<InventoryController>();
+        gameTracker = GameTracker.FindObjectOfType<GameTracker>();
     }
 
     public void LoadScene()
     {
-        SceneManager.LoadScene(GAME_SCENE);
+        SceneManager.LoadScene(GAME_SCENE, LoadSceneMode.Additive);
 
     }
     public void LoadBooks()
@@ -35,8 +39,20 @@ public const string GAME_SCENE = "CenterScene";
 
     }
     public void LoadBearPuzzle(){
-        if (inventoryUIView.selectedButton.itemData == bearItemData){
-            SceneManager.LoadScene("BearPuzzleScene");
+        if (gameTracker.bearUnlocked){
+            SceneManager.LoadScene("BearPuzzleScene", LoadSceneMode.Additive);
+            SceneManager.UnloadSceneAsync("LeftScene");
         }
+        else {
+            if (inventoryUIView.selectedButton != null){
+            if(inventoryUIView.selectedButton.itemData == bearItemData){
+                SceneManager.LoadScene("BearPuzzleScene", LoadSceneMode.Additive);
+                SceneManager.UnloadSceneAsync("LeftScene");
+                inventoryController.UseItem(inventoryUIView.selectedButton.itemData);
+                gameTracker.UnlockBear();
+                }
+            } 
+        }
+        
     }
 }

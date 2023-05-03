@@ -15,9 +15,10 @@ private void Start()
     inventoryUIView.onUse += UseItem;
 }
 
-private void UseItem(ItemData itemData)
+public void UseItem(ItemData itemData)
 {
     inventoryUIModel.inventory.Remove(itemData);
+    inventoryUIView.selectedButton = null;
     inventoryUIView.UpdateView(inventoryUIModel.inventory);
 }
 

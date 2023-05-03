@@ -665,7 +665,7 @@ GameObject:
   - component: {fileID: 1736302593}
   - component: {fileID: 1736302592}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: GameTracker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -683,6 +683,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 931c8fc94c5642149b29cbfc0a977672, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bearUnlocked: 0
   gameStateA: 0
   gameStateB: 0
   gameStateC: 0
