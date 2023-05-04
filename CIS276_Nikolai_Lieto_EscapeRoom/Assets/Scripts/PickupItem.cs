@@ -11,7 +11,7 @@ public class PickupItem : MonoBehaviour
     private Button button;
     void Start()
     {
-        inventoryController = InventoryController.FindObjectOfType<InventoryController>();
+        inventoryController = FindObjectOfType<InventoryController>();
         Button button = this.GetComponent<Button>();
         button.onClick.AddListener(Pickup);
     }

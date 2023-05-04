@@ -1088,6 +1088,8 @@ MonoBehaviour:
   loadBearPuzzleButton: {fileID: 229856630}
   inventoryUIView: {fileID: 0}
   bearItemData: {fileID: 11400000, guid: 2c31295e617e81c4f99739eac8ea11ad, type: 2}
+  inventoryController: {fileID: 0}
+  gameTracker: {fileID: 0}
 --- !u!4 &1630901148
 Transform:
   m_ObjectHideFlags: 0

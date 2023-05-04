@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class CenterSceneLoader : MonoBehaviour
 {
-public const string GAME_SCENE = "CenterScene";
+public const string GAME_SCENE = "GameScene";
 
     [SerializeField]
     private Button loadSceneButton;
@@ -18,7 +18,6 @@ public const string GAME_SCENE = "CenterScene";
     public void LoadScene()
     {
         SceneManager.LoadScene(GAME_SCENE);
-        SceneManager.LoadScene("DisplayScene", LoadSceneMode.Additive);
 
     }
 }
