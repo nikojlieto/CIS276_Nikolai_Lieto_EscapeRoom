@@ -16,6 +16,10 @@ public class InventoryUIView : MonoBehaviour
 
     public void UpdateView(List<ItemData> items)
     {
+        for (int i = 0; i < inventoryGrid.transform.childCount; i++){
+            Destroy(inventoryGrid.transform.GetChild(i).gameObject);
+        }
+             
         foreach(ItemData item in items)
         {
             InventoryViewButton button = Instantiate(itemButtonPrefab, inventoryGrid).GetComponent<InventoryViewButton>();
@@ -28,7 +32,7 @@ public class InventoryUIView : MonoBehaviour
     public void InventoryItemClicked(InventoryViewButton button)
     {
         selectedButton = button;
-        button.GetComponent<Button>().onClick.AddListener(UseItem);
+        //button.GetComponent<Button>().onClick.AddListener(UseItem);
     }
 
     private void UseItem()

@@ -9,7 +9,8 @@ public class BearButton : MonoBehaviour
     [SerializeField]
     private BearPuzzleTracker bearPuzzleTracker;
     void Start(){
-        Button button = this.GetComponent<Button>();
+        button = GetComponent<Button>();
+        //this is extra/unecessary
         button.onClick.AddListener(BearClick);
     }
 
